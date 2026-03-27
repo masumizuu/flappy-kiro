@@ -5,6 +5,7 @@
 /// The game always renders at `sceneSize` internally; the window scales around it.
 
 import CoreGraphics
+import Foundation
 
 enum LayoutConstants {
 

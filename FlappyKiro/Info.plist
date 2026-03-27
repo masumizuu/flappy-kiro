@@ -22,6 +22,10 @@
     <string>13.0</string>
     <key>NSPrincipalClass</key>
     <string>NSApplication</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundleIconName</key>
+    <string>AppIcon</string>
     <!-- Register custom fonts so SpriteKit can load them by name -->
     <!-- Variable font files — registered names: "Sora Regular", "JetBrains Mono Regular" -->
     <key>ATSApplicationFontsPath</key>

@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1811AB81ADF1ED6EF108C147 /* Sora-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8135F58F89E5CF359215739 /* Sora-VariableFont_wght.ttf */; };
+		198486F4B620E6EA2CB5AE69 /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA91AB103496B9206C136AA /* LayoutConstants.swift */; };
+		1AE6307AE4138AAFDE87863A /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F8FB4DFA31B9208194420D /* ColorPalette.swift */; };
+		215B2698710954AD06252D67 /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86626AD51BF033C7504A8D61 /* PhysicsComponent.swift */; };
+		279407A698C0B00607F60AC0 /* DifficultyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9A35D5A36052C5C1B3AA4 /* DifficultyConstants.swift */; };
+		27A3E1AF3F2C83D995D03923 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4568DD8C37186E725FB96D /* ScoreComponent.swift */; };
+		3DDA36E82992867CBBA326AE /* InputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95335E81785EB1B13FEAA70 /* InputHandler.swift */; };
+		5AA52B6EBD22671DCBF1B847 /* WallSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6AE7DC5691D4F29F641F8 /* WallSpawner.swift */; };
+		5D031E127AC4A5CBA052680F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227ED6EEA2D097533A73495 /* Logger.swift */; };
+		6307F82AB43DDD4F4024679B /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426ABEBCF4287DA5DA1B0BD3 /* RenderComponent.swift */; };
+		63A6A4F19C81AEBB0AC40753 /* DifficultyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163B709197EB1F08AF9B0265 /* DifficultyComponent.swift */; };
+		863A7CE6DFC1E178E79110D0 /* CollisionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001FF425AA3CD91A445913C2 /* CollisionHandler.swift */; };
+		9272DA589BA70B84E98BE909 /* GameWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20DC03D085BC579DA4287D8 /* GameWindowView.swift */; };
+		94BA68A4E436B0DCFD8D20BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9F1997FC2103955FE48A2C /* Assets.xcassets */; };
+		A0FB4AB8AAD861DA93A63C07 /* WallPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE514C63A2EAB083D31242B /* WallPair.swift */; };
+		A7465323DDBC0470A512F973 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BE1F45A46510BEABBA456 /* GameScene.swift */; };
+		B45BA9740E32B4A7399D32E1 /* FlappyKiroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B46548B1C21C51BFEF19E /* FlappyKiroApp.swift */; };
+		C7871150BCB701AD5D4B80B9 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 81B5C6728D0A5226915AD91F /* jump.wav */; };
+		D3968E87301E43BE68921471 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF0DC2028AF9DC3FDAA265 /* GameState.swift */; };
+		D7AB34AEB6432175EF7BAE83 /* game_over.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17546404F984609C22DBBCB0 /* game_over.wav */; };
+		E34AFE361EC888ED5316E22E /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81AF75E9C6AC0DCA0393AB0 /* AudioManager.swift */; };
+		EE2B0BB1205C63C05352A378 /* PhysicsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8ED5EF38F80B88C1F357A3 /* PhysicsConstants.swift */; };
+		F91EBFB240C62F00317677CF /* JetBrainsMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9166C1F3B5E51E55FFA914 /* JetBrainsMono-VariableFont_wght.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		001FF425AA3CD91A445913C2 /* CollisionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollisionHandler.swift; path = FlappyKiro/Game/CollisionHandler.swift; sourceTree = "<group>"; };
+		0A9F1997FC2103955FE48A2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FlappyKiro/Assets.xcassets; sourceTree = "<group>"; };
+		14EF0DC2028AF9DC3FDAA265 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameState.swift; path = FlappyKiro/Game/GameState.swift; sourceTree = "<group>"; };
+		163B709197EB1F08AF9B0265 /* DifficultyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DifficultyComponent.swift; path = FlappyKiro/Game/DifficultyComponent.swift; sourceTree = "<group>"; };
+		17546404F984609C22DBBCB0 /* game_over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = game_over.wav; path = FlappyKiro/Resources/Audio/game_over.wav; sourceTree = "<group>"; };
+		18E9A35D5A36052C5C1B3AA4 /* DifficultyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DifficultyConstants.swift; path = FlappyKiro/Constants/DifficultyConstants.swift; sourceTree = "<group>"; };
+		1A9166C1F3B5E51E55FFA914 /* JetBrainsMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JetBrainsMono-VariableFont_wght.ttf"; path = "FlappyKiro/Resources/Fonts/JetBrainsMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		22E093276846ED456F739260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FlappyKiro/Info.plist; sourceTree = "<group>"; };
+		2DE6AE7DC5691D4F29F641F8 /* WallSpawner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WallSpawner.swift; path = FlappyKiro/Game/WallSpawner.swift; sourceTree = "<group>"; };
+		317BE1F45A46510BEABBA456 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = FlappyKiro/Game/GameScene.swift; sourceTree = "<group>"; };
+		3A2B46548B1C21C51BFEF19E /* FlappyKiroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlappyKiroApp.swift; path = FlappyKiro/App/FlappyKiroApp.swift; sourceTree = "<group>"; };
+		426ABEBCF4287DA5DA1B0BD3 /* RenderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RenderComponent.swift; path = FlappyKiro/Rendering/RenderComponent.swift; sourceTree = "<group>"; };
+		5A4568DD8C37186E725FB96D /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoreComponent.swift; path = FlappyKiro/Game/ScoreComponent.swift; sourceTree = "<group>"; };
+		5B8ED5EF38F80B88C1F357A3 /* PhysicsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhysicsConstants.swift; path = FlappyKiro/Constants/PhysicsConstants.swift; sourceTree = "<group>"; };
+		81B5C6728D0A5226915AD91F /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = jump.wav; path = FlappyKiro/Resources/Audio/jump.wav; sourceTree = "<group>"; };
+		86626AD51BF033C7504A8D61 /* PhysicsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhysicsComponent.swift; path = FlappyKiro/Game/PhysicsComponent.swift; sourceTree = "<group>"; };
+		8EBE7243D94FF4A1FFC9D76B /* FlappyKiro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = FlappyKiro.entitlements; path = FlappyKiro/FlappyKiro.entitlements; sourceTree = "<group>"; };
+		A81AF75E9C6AC0DCA0393AB0 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = FlappyKiro/Game/AudioManager.swift; sourceTree = "<group>"; };
+		AAE514C63A2EAB083D31242B /* WallPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WallPair.swift; path = FlappyKiro/Game/WallPair.swift; sourceTree = "<group>"; };
+		B8135F58F89E5CF359215739 /* Sora-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sora-VariableFont_wght.ttf"; path = "FlappyKiro/Resources/Fonts/Sora-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		B8F8FB4DFA31B9208194420D /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorPalette.swift; path = FlappyKiro/Constants/ColorPalette.swift; sourceTree = "<group>"; };
+		D20DC03D085BC579DA4287D8 /* GameWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameWindowView.swift; path = FlappyKiro/App/GameWindowView.swift; sourceTree = "<group>"; };
+		F227ED6EEA2D097533A73495 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = FlappyKiro/Game/Logger.swift; sourceTree = "<group>"; };
+		F95335E81785EB1B13FEAA70 /* InputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputHandler.swift; path = FlappyKiro/Game/InputHandler.swift; sourceTree = "<group>"; };
+		FBA91AB103496B9206C136AA /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LayoutConstants.swift; path = FlappyKiro/Constants/LayoutConstants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9E872B0C4F3AB11D258C39F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DFE442710E429386E53D077 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B46548B1C21C51BFEF19E /* FlappyKiroApp.swift */,
+				D20DC03D085BC579DA4287D8 /* GameWindowView.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		4D017116F3F66600DE7FD8FA /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				81B5C6728D0A5226915AD91F /* jump.wav */,
+				17546404F984609C22DBBCB0 /* game_over.wav */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		62813ED6206E72BDC1F480C9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0A9F1997FC2103955FE48A2C /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		76EB2F62B03CE376902241AE /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				317BE1F45A46510BEABBA456 /* GameScene.swift */,
+				14EF0DC2028AF9DC3FDAA265 /* GameState.swift */,
+				AAE514C63A2EAB083D31242B /* WallPair.swift */,
+				86626AD51BF033C7504A8D61 /* PhysicsComponent.swift */,
+				2DE6AE7DC5691D4F29F641F8 /* WallSpawner.swift */,
+				5A4568DD8C37186E725FB96D /* ScoreComponent.swift */,
+				163B709197EB1F08AF9B0265 /* DifficultyComponent.swift */,
+				001FF425AA3CD91A445913C2 /* CollisionHandler.swift */,
+				F95335E81785EB1B13FEAA70 /* InputHandler.swift */,
+				A81AF75E9C6AC0DCA0393AB0 /* AudioManager.swift */,
+				F227ED6EEA2D097533A73495 /* Logger.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		7D84081E25D943853D2DF949 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B8F8FB4DFA31B9208194420D /* ColorPalette.swift */,
+				18E9A35D5A36052C5C1B3AA4 /* DifficultyConstants.swift */,
+				FBA91AB103496B9206C136AA /* LayoutConstants.swift */,
+				5B8ED5EF38F80B88C1F357A3 /* PhysicsConstants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		CF6A3577DC9F8EA5A4DC6B57 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				426ABEBCF4287DA5DA1B0BD3 /* RenderComponent.swift */,
+			);
+			name = Rendering;
+			sourceTree = "<group>";
+		};
+		D49AF4B129C152E6E82AA1DD /* FlappyKiro */ = {
+			isa = PBXGroup;
+			children = (
+				3DFE442710E429386E53D077 /* App */,
+				76EB2F62B03CE376902241AE /* Game */,
+				CF6A3577DC9F8EA5A4DC6B57 /* Rendering */,
+				7D84081E25D943853D2DF949 /* Constants */,
+				F5264EC371987BBAC756C3C3 /* Resources */,
+				62813ED6206E72BDC1F480C9 /* Assets */,
+				22E093276846ED456F739260 /* Info.plist */,
+				8EBE7243D94FF4A1FFC9D76B /* FlappyKiro.entitlements */,
+			);
+			name = FlappyKiro;
+			sourceTree = "<group>";
+		};
+		F5264EC371987BBAC756C3C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7B93D089D14B31F25C3DDB2 /* Fonts */,
+				4D017116F3F66600DE7FD8FA /* Audio */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F7B93D089D14B31F25C3DDB2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B8135F58F89E5CF359215739 /* Sora-VariableFont_wght.ttf */,
+				1A9166C1F3B5E51E55FFA914 /* JetBrainsMono-VariableFont_wght.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16FCDF1155BFA8B8D63144D7 /* FlappyKiro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8230D671935F5AA34CB4F0DF /* Build configuration list for PBXNativeTarget "FlappyKiro" */;
+			buildPhases = (
+				7EE609159AC086BAB15FF998 /* Sources */,
+				A2892AFC2D88060C0AA91373 /* Resources */,
+				A9E872B0C4F3AB11D258C39F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlappyKiro;
+			packageProductDependencies = (
+			);
+			productName = FlappyKiro;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1781F676DEDF5767F3243DB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					16FCDF1155BFA8B8D63144D7 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = B35DC1D2E2921F7C9EBE4624 /* Build configuration list for PBXProject "FlappyKiro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D49AF4B129C152E6E82AA1DD /* FlappyKiro */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16FCDF1155BFA8B8D63144D7 /* FlappyKiro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2892AFC2D88060C0AA91373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94BA68A4E436B0DCFD8D20BB /* Assets.xcassets in Resources */,
+				C7871150BCB701AD5D4B80B9 /* jump.wav in Resources */,
+				D7AB34AEB6432175EF7BAE83 /* game_over.wav in Resources */,
+				1811AB81ADF1ED6EF108C147 /* Sora-VariableFont_wght.ttf in Resources */,
+				F91EBFB240C62F00317677CF /* JetBrainsMono-VariableFont_wght.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EE609159AC086BAB15FF998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45BA9740E32B4A7399D32E1 /* FlappyKiroApp.swift in Sources */,
+				9272DA589BA70B84E98BE909 /* GameWindowView.swift in Sources */,
+				A7465323DDBC0470A512F973 /* GameScene.swift in Sources */,
+				D3968E87301E43BE68921471 /* GameState.swift in Sources */,
+				A0FB4AB8AAD861DA93A63C07 /* WallPair.swift in Sources */,
+				215B2698710954AD06252D67 /* PhysicsComponent.swift in Sources */,
+				5AA52B6EBD22671DCBF1B847 /* WallSpawner.swift in Sources */,
+				27A3E1AF3F2C83D995D03923 /* ScoreComponent.swift in Sources */,
+				63A6A4F19C81AEBB0AC40753 /* DifficultyComponent.swift in Sources */,
+				863A7CE6DFC1E178E79110D0 /* CollisionHandler.swift in Sources */,
+				3DDA36E82992867CBBA326AE /* InputHandler.swift in Sources */,
+				E34AFE361EC888ED5316E22E /* AudioManager.swift in Sources */,
+				5D031E127AC4A5CBA052680F /* Logger.swift in Sources */,
+				6307F82AB43DDD4F4024679B /* RenderComponent.swift in Sources */,
+				1AE6307AE4138AAFDE87863A /* ColorPalette.swift in Sources */,
+				279407A698C0B00607F60AC0 /* DifficultyConstants.swift in Sources */,
+				198486F4B620E6EA2CB5AE69 /* LayoutConstants.swift in Sources */,
+				EE2B0BB1205C63C05352A378 /* PhysicsConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		148969157AB193137A866CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MACOS_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AA11223344556677889900AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = FlappyKiro/FlappyKiro.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FlappyKiro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flappykiro.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BB11223344556677889900BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = FlappyKiro/FlappyKiro.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FlappyKiro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flappykiro.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DCC81AC0E180E31DD6DD2585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				MACOS_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8230D671935F5AA34CB4F0DF /* Build configuration list for PBXNativeTarget "FlappyKiro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA11223344556677889900AA /* Debug */,
+				BB11223344556677889900BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B35DC1D2E2921F7C9EBE4624 /* Build configuration list for PBXProject "FlappyKiro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC81AC0E180E31DD6DD2585 /* Debug */,
+				148969157AB193137A866CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1781F676DEDF5767F3243DB0 /* Project object */;
+}

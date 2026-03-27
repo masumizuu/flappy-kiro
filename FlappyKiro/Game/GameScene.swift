@@ -5,15 +5,15 @@
 ///
 /// Responsibilities:
 ///   - Owns and coordinates all sub-components (physics, walls, score, etc.)
-///   - Drives the game loop via CADisplayLink (60 FPS, frame-synced)
+///   - Drives the game loop via CVDisplayLink (60 FPS, frame-synced, macOS native)
 ///   - Manages the state machine: idle → playing → gameOver
 ///   - Handles keyboard input by delegating to InputHandler
 ///   - Applies Ghosty's velocity-based tilt animation each frame
 ///
-/// How CADisplayLink works:
-///   CADisplayLink is a timer that fires in sync with the display's refresh rate.
-///   On a 60 Hz display it fires every ~16.7 ms. We use it instead of SKScene's
-///   built-in update() because it gives us precise frame timing control.
+/// How CVDisplayLink works (macOS):
+///   CVDisplayLink is the macOS equivalent of iOS's CADisplayLink.
+///   It fires a C callback in sync with the display refresh rate (~16.7 ms at 60 Hz).
+///   We dispatch from that callback to the main thread to safely update the scene.
 ///
 /// How the state machine works:
 ///   idle      — start screen shown, loop paused
@@ -21,13 +21,13 @@
 ///   gameOver  — loop paused, game-over screen shown
 
 import SpriteKit
+import CoreVideo   // for CVDisplayLink
 
 final class GameScene: SKScene {
 
     // MARK: - Sub-components
 
     private let renderComponent  = RenderComponent()
-    private let physicsComp      = PhysicsComponent(ghostyNode: SKShapeNode()) // replaced in setup
     private var wallSpawner:       WallSpawner!
     private let scoreComponent   = ScoreComponent()
     private let difficultyComp   = DifficultyComponent()
@@ -42,16 +42,16 @@ final class GameScene: SKScene {
     private var startScreenNode: SKNode?
     private var gameOverNode:    SKNode?
 
-    // MARK: - Game Loop
+    // MARK: - Game Loop (CVDisplayLink — macOS native)
 
-    private var displayLink:     CADisplayLink?
+    private var displayLink:     CVDisplayLink?
     private var lastUpdateTime:  CFTimeInterval = 0
 
     // MARK: - State
 
     private(set) var gameState: GameState = .idle
 
-    // MARK: - Physics Component (re-created with real ghosty node in setupScene)
+    // MARK: - Physics Component
 
     private var physics: PhysicsComponent!
 
@@ -120,21 +120,43 @@ final class GameScene: SKScene {
 
     private func startGameLoop() {
         lastUpdateTime = CACurrentMediaTime()
-        let link = CADisplayLink(target: self, selector: #selector(gameLoopTick))
-        link.add(to: .main, forMode: .common)
-        displayLink = link
+
+        // CVDisplayLink fires a C callback synced to the display refresh rate.
+        // We create it, set a callback that dispatches to the main thread, then start it.
+        CVDisplayLinkCreateWithActiveCGDisplays(&displayLink)
+
+        guard let link = displayLink else {
+            Logger.error("GameScene: failed to create CVDisplayLink")
+            return
+        }
+
+        // The callback is a C closure — it cannot capture `self` directly,
+        // so we pass `self` as an unmanaged pointer via the userInfo parameter.
+        let userInfo = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
+
+        CVDisplayLinkSetOutputCallback(link, { _, _, _, _, _, userInfo -> CVReturn in
+            // Retrieve `self` from the raw pointer.
+            guard let ptr = userInfo else { return kCVReturnSuccess }
+            let scene = Unmanaged<GameScene>.fromOpaque(ptr).takeUnretainedValue()
+            // Dispatch to main thread — SpriteKit scene mutations must happen on main.
+            DispatchQueue.main.async { scene.gameLoopTick() }
+            return kCVReturnSuccess
+        }, userInfo)
+
+        CVDisplayLinkStart(link)
     }
 
     private func stopGameLoop() {
-        displayLink?.invalidate()
-        displayLink = nil
+        if let link = displayLink {
+            CVDisplayLinkStop(link)
+            displayLink = nil
+        }
     }
 
     @objc private func gameLoopTick() {
         guard gameState == .playing else { return }
 
         let now       = CACurrentMediaTime()
-        // Clamp deltaTime to prevent physics tunnelling on slow/first frames.
         let deltaTime = min(now - lastUpdateTime, Double(PhysicsConstants.maxDeltaTime))
         lastUpdateTime = now
 
