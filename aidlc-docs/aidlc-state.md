@@ -32,11 +32,11 @@
 - [-] Units Generation (SKIP - single unit)
 
 ### 🟢 CONSTRUCTION PHASE (Unit: Flappy Kiro macOS App)
-- [ ] Functional Design - EXECUTE
-- [ ] NFR Requirements - EXECUTE
-- [ ] NFR Design - EXECUTE
+- [x] Functional Design - EXECUTE
+- [x] NFR Requirements - EXECUTE
+- [x] NFR Design - EXECUTE
 - [-] Infrastructure Design (SKIP - local desktop app)
-- [ ] Code Generation - EXECUTE
+- [x] Code Generation - EXECUTE
 - [ ] Build and Test - EXECUTE
 
 ### 🟡 OPERATIONS PHASE
@@ -44,6 +44,6 @@
 
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
-- **Current Stage**: Application Design Complete
-- **Next Stage**: Functional Design (Construction Phase)
+- **Current Stage**: Code Generation Complete
+- **Next Stage**: Build and Test
 - **Status**: Awaiting approval
